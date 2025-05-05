@@ -52,6 +52,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.recyclerview)
+    //dagger
+    implementation (libs.dagger)
+    kapt (libs.dagger.compiler)
     //ViewModel
     implementation(libs.androidx.lifecycle.livedata.ktx)
     //LiveData
