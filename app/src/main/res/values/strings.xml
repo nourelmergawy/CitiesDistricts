@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">CitiesDistricts</string>
+    <string name="error_timeout">error timeout</string>
+    <string name="error_unknown_host">error unknown host</string>
+    <string name="error_retryable_server">error retryable server</string>
+    <string name="error_non_retryable_server">error non retryable server</string>
+    <string name="error_unauthorized_access">error non retryable server</string>
+    <string name="error_not_found">error not found</string>
+    <string name="retry">retry</string>
+    <string name="no_internet_connection">no internet connection</string>
+    <string name="login">login</string>
+    <string name="loading">loading</string>
 </resources>
