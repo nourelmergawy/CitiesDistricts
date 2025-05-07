@@ -13,7 +13,7 @@ class LoadingDialogDelegate(private val context: Context) : ILoadingDialogDelega
     override fun showLoading(isLoading: Boolean, message: String?) {
         if (isLoading) {
             loadingDialog?.show() ?: run {
-                val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_loading,null)
+                val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_loading, null)
                 loadingDialog = MaterialAlertDialogBuilder(context)
                     .setView(dialogView)
                     .setCancelable(false)
