@@ -20,6 +20,9 @@ android {
     }
 
     buildTypes {
+        all{
+            buildConfigField("String", "BASE_URL", "\"https://stg-app.bosta.co/api/v2/\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
