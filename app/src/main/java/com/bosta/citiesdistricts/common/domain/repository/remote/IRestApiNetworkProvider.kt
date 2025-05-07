@@ -1,4 +1,4 @@
-package com.bosta.citiesdistricts.common.domain.remote
+package com.bosta.citiesdistricts.common.domain.repository.remote
 
 import java.lang.reflect.Type
 
