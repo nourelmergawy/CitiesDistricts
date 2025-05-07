@@ -6,9 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
 import com.bosta.citiesdistricts.R
 import com.bosta.citiesdistricts.common.data.models.exception.BostaException
@@ -20,9 +17,6 @@ import com.bosta.citiesdistricts.common.presentation.base.delegates.loading_dele
 import com.bosta.citiesdistricts.common.presentation.base.delegates.message_delegate.IMessageDelegate
 import com.bosta.citiesdistricts.common.presentation.base.delegates.message_delegate.MessageDelegate
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 
 abstract class BaseFragment<VB : ViewBinding>(private val inflateMethod: (LayoutInflater, ViewGroup?, Boolean) -> VB) :
     Fragment(),
@@ -166,22 +160,6 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflateMethod: (Layout
                 )
             }
         }, delay)
-    }
-
-    fun <T> collectStateFlowWithLifecycle(flow: Flow<T>, collect: suspend (T) -> Unit) {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                flow.collectLatest(collect)
-            }
-        }
-    }
-
-    fun <T> collectEventsFlowWithLifecycle(flow: Flow<T>, collect: suspend (T) -> Unit) {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                flow.collect(collect)
-            }
-        }
     }
 
     override fun onDestroyView() {

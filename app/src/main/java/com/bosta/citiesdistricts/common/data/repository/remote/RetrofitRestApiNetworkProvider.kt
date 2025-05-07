@@ -3,7 +3,7 @@ package com.bosta.citiesdistricts.common.data.repository.remote
 import com.bosta.citiesdistricts.android.extensions.fromJson
 import com.bosta.citiesdistricts.common.data.models.exception.BostaException
 import com.bosta.citiesdistricts.common.data.models.response.ErrorResponse
-import com.bosta.citiesdistricts.common.domain.remote.IRestApiNetworkProvider
+import com.bosta.citiesdistricts.common.domain.repository.remote.IRestApiNetworkProvider
 import com.google.gson.Gson
 import okhttp3.ResponseBody
 import retrofit2.Response
